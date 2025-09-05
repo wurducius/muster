@@ -11,7 +11,7 @@ if (compilation.clearScreen) {
 }
 info("Starting Homepage build...")
 clean()
-build().then((time) => {
+build().then(({ time, totalSteps }) => {
   success(`Total build in ${prettyTime(time)} at ${buildPath}`)
   dirSize(buildPath).then((size) => {
     success(`Build size: ${prettySize(size)}`)
