@@ -1,4 +1,4 @@
-const scriptPath = `${__dirname}/src/scripts/`
+const scriptPath = `${__dirname}/../src/scripts/`
 
 const script = (id) => ({ cmd: id, run: `node ${scriptPath}${id}.js` })
 
