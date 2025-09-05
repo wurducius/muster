@@ -6,13 +6,10 @@ const { prettyTime } = require("../util/compile-util")
 const { existsSync, mkdirSync, rmSync, cp, writeFile } = require("../util/fs")
 const { buildPath, buildIndexPath, buildAboutPath, buildLicensePath, publicSourcePath } = require("../util/path")
 const compileHtml = require("../compile/template")
-const { style, indexScript, indexContent } = require("../compile/views/index")
+const { style } = require("../compile/views/index")
+const muster = require("../../muster")
 
-const head = { icon: "./logo512.png", url: "https://eofol.com/homepage", theme: "#d4d4d4" }
-
-const indexHead = { ...head, title: "Homepage", description: "Homepage app dashboard" }
-
-const pages = [{ name: "Index", path: buildIndexPath, script: indexScript, head: indexHead, content: indexContent }]
+const { pages } = muster
 
 const touchRm = (path) => {
   if (existsSync(path)) {

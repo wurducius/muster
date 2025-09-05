@@ -1,7 +1,7 @@
 {
-  "short_name": "homepage",
-  "name": "Homepage",
-  "description": "Homepage website",
+  "short_name": "muster",
+  "name": "Muster",
+  "description": "Website made in Muster",
   "lang": "en",
   "icons": [
     {
