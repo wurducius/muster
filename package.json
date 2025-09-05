@@ -1,6 +1,6 @@
 {
   "name": "eofol-muster",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Minimal web framework based on templating",
   "license": "MIT",
   "author": "Jakub Eliáš <wurducius@gmail.com>",
@@ -22,7 +22,7 @@
     "lint": "npm run check-fix && npm run prettify",
     "depcheck": "npx depcheck"
   },
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "9.34.0",
     "chalk": "4.1.2",
     "eslint": "9.34.0",
