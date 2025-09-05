@@ -1,0 +1,21 @@
+:root {
+  --font-family: Roboto, sans-serif;
+  --bg-color: #111111;
+  --font-color: #d4d4d4;
+  --container-padding: 16px 16px;
+  --container-padding-val: 16px;
+  --container-gap: 32px;
+  --color-primary: #7549ee;
+  --color-primary-dark: purple;
+  --color-primary-light: magenta;
+  --font-size-0: 0.875rem;
+  --font-size-1: 1rem;
+  --font-size-2: 1.125rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.5rem;
+  --font-size-5: 1.875rem;
+  --font-size-6: 2.25rem;
+  --font-size-7: 3rem;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 700;
+}

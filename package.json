@@ -1,0 +1,34 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/build.js",
+  "scripts": {
+    "build": "node ./src/build.js",
+    "clean": "node ./src/clean.js",
+    "serve": "node ./src/serve.js",
+    "reinstall": "node ./src/reinstall.js",
+    "lighthouse": "node ./src/lighthouse.js",
+    "deploy": "node ./src/deploy.js",
+    "release": "node ./src/release.js",
+    "check": "npx eslint -c eslint.config.mjs .",
+    "check-fix": "npx eslint -c eslint.config.mjs --fix .",
+    "prettify": "npx prettier . --write",
+    "lint": "npm run check-fix && npm run prettify",
+    "depcheck": "npx depcheck"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.34.0",
+    "chalk": "4.1.2",
+    "eslint": "9.34.0",
+    "globals": "16.3.0",
+    "html-minifier-terser": "7.2.0",
+    "http-server": "14.1.1",
+    "prettier": "3.6.2",
+    "rimraf": "6.0.1",
+    "w3c-html-validator": "1.9.1"
+  }
+}

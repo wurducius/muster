@@ -1,0 +1,31 @@
+.mt-0 {
+  margin-top: 8px;
+}
+
+.mt-1 {
+  margin-top: 16px;
+}
+
+.mt-2 {
+  margin-top: 32px;
+}
+
+.mb {
+  margin-bottom: 16px;
+}
+
+.mr {
+  margin-right: 4px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.gap {
+  gap: 64px;
+}
+
+.hidden {
+  display: none;
+}
