@@ -1,5 +1,5 @@
 const { readFileSync } = require("../../util/fs")
-const { scriptPaths, stylePaths } = require("../../util/path")
+const { scriptPaths } = require("../../util/path")
 const { div, h1, h2, img } = require("../ui/simple")
 
 const readResources = (resourcesPath) =>
@@ -7,8 +7,6 @@ const readResources = (resourcesPath) =>
     .map((path) => readFileSync(path))
     .map((buffer) => buffer.toString())
     .join("\n")
-
-const style = readResources(stylePaths)
 
 const indexScript = readResources(scriptPaths)
 
@@ -21,4 +19,4 @@ const indexContent = [
   ]),
 ]
 
-module.exports = { style, indexScript, indexContent }
+module.exports = { indexScript, indexContent }

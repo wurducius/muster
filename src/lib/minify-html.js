@@ -19,7 +19,7 @@ const minifyHtmlOptions = {
   sortClassName: true,
 }
 
-const minifyHtml = async (html, pageName) => {
+const minifyHtml = async (html, pageName, totalSteps, step) => {
   try {
     const { time, result: minified } = await profiler(() =>
       minify(html, minifyHtmlOptions).catch((ex) => {
@@ -27,7 +27,7 @@ const minifyHtml = async (html, pageName) => {
       }),
     )
     success(
-      `[2/4] ${pageName} HTML minified successfully in ${prettyTime(time)}: ${prettySize(html.length)} -> ${prettySize(
+      `[${step}/${totalSteps}] ${pageName} HTML minified successfully in ${prettyTime(time)}: ${prettySize(html.length)} -> ${prettySize(
         minified.length,
       )} (-${prettySize(html.length - minified.length)}, -${((100 * (html.length - minified.length)) / html.length).toFixed(0)} %)`,
     )
