@@ -1,7 +1,7 @@
 {
   "name": "eofol-muster",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Minimal web framework based on templating",
   "license": "MIT",
   "author": "Jakub Eliáš <wurducius@gmail.com>",
   "type": "commonjs",
