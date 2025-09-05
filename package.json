@@ -1,11 +1,13 @@
 {
   "name": "muster",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "Jakub Eliáš <wurducius@gmail.com>",
   "type": "commonjs",
-  "main": "src/build.js",
+  "bin": {
+    "muster": "bin/muster-scripts.js"
+  },
   "scripts": {
     "build": "node ./src/build.js",
     "clean": "node ./src/clean.js",
