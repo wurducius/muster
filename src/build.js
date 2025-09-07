@@ -6,6 +6,8 @@ const { success, clear, info } = require("./util/log")
 const { buildPath, buildIndexPath } = require("./util/path")
 const { compilation } = require("./config")
 
+const isRealease = process.env.EOFOL_RELEASE === "true"
+
 if (compilation.clearScreen) {
   clear()
 }
@@ -15,7 +17,7 @@ build().then(({ time, totalSteps }) => {
   success(`Total build in ${prettyTime(time)} at ${buildPath}`)
   dirSize(buildPath).then((size) => {
     success(`Build size: ${prettySize(size)}`)
-    if (compilation.open) {
+    if (!isRealease && compilation.open) {
       info("Opening in browser...")
       openLocal(buildIndexPath)
     }
