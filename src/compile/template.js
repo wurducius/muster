@@ -8,7 +8,7 @@ const {
   bodyTag,
   headTag,
   htmlTag,
-} = require("./ui/simple")
+} = require("eofol-simple-html")
 
 const DOCTYPE_HTML = "<!DOCTYPE html>"
 
