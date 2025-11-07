@@ -1,6 +1,6 @@
 const { readFileSync } = require("../../util/fs")
-const { scriptPaths } = require("../../util/path")
-const { div, h1, h2, img } = require("../ui/simple")
+const { scriptPaths, stylePaths } = require("../../util/path")
+const { div, h1, h2, img } = require("eofol-simple-html")
 
 const readResources = (resourcesPath) =>
   resourcesPath
@@ -9,6 +9,8 @@ const readResources = (resourcesPath) =>
     .join("\n")
 
 const indexScript = readResources(scriptPaths)
+
+const indexStyle = readResources(stylePaths)
 
 const indexContent = [
   div({ class: "col center content gap" }, [
@@ -19,4 +21,4 @@ const indexContent = [
   ]),
 ]
 
-module.exports = { indexScript, indexContent }
+module.exports = { indexScript, indexContent, indexStyle }

@@ -1,3 +1,5 @@
-const serve = require("./scripts/serve")
+const { serveSync } = require("./scripts/serve")
+const { info } = require("./util/log")
 
-serve()
+info("serve")
+serveSync()

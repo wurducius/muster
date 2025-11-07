@@ -9,8 +9,11 @@ const buildLicensePath = join(buildPath, "license.html")
 const buildAboutPath = join(buildPath, "about.html")
 const publicSourcePath = join(CWD, "public")
 const deployScriptPath = join(DIRNAME, "..", "..", "deploy.bat")
+const musterPath = join(CWD, "muster")
 
 const scriptPaths = [join(DIRNAME, "..", "include", "js", "init.js")]
+
+const devServerScriptPaths = [join(DIRNAME, "..", "include", "js", "hot-reload.js")]
 
 const stylePaths = [
   join(DIRNAME, "..", "include", "css", "theme.css"),
@@ -31,5 +34,7 @@ module.exports = {
   publicSourcePath,
   deployScriptPath,
   scriptPaths,
+  devServerScriptPaths,
   stylePaths,
+  musterPath,
 }

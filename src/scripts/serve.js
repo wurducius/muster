@@ -1,5 +1,4 @@
-const { execSync } = require("../util/process")
-const { info } = require("../util/log")
+const { execSync, spawn } = require("../util/process")
 const { CWD } = require("../util/path")
 
 const serveOptions = {
@@ -8,11 +7,16 @@ const serveOptions = {
   root: "./build",
 }
 
-const serve = () => {
-  info("serve")
+const serveSync = (port, isSilent) => {
   execSync(
-    `npx ${CWD}/node_modules/http-server ${serveOptions.root} -p ${serveOptions.port}${serveOptions.open ? " -o" : ""}`,
+    `npx ${CWD}/node_modules/http-server ${serveOptions.root} -p ${port ?? serveOptions.port}${serveOptions.open ? " -o" : ""}${isSilent ? " -s" : ""}`,
   )
 }
 
-module.exports = serve
+const serveAsync = (port, isSilent) => {
+  spawn(
+    `npx ${CWD}/node_modules/http-server ${serveOptions.root} -p ${port ?? serveOptions.port}${serveOptions.open ? " -o" : ""}${isSilent ? " -s" : ""}`,
+  )
+}
+
+module.exports = { serveSync, serveAsync }
